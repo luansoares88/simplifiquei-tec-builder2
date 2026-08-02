@@ -1,0 +1,99 @@
+<!doctype html><html lang='pt-BR'><head><meta charset='utf-8'><meta name='viewport' content='width=device-width,initial-scale=1'>
+<title>Simplifiquei TEC Builder Elite</title>
+<link rel="icon" type="image/png" href="assets/icon.png">
+<style>
+body{margin:0;font-family:Arial;background:#0f172a;color:#fff}
+header{background:#111827;padding:18px;position:sticky;top:0;border-bottom:3px solid #d4af37}
+main{max-width:1100px;margin:auto;padding:18px}
+.card{background:#1e293b;border-radius:14px;padding:16px;margin:18px 0}
+table{width:100%;border-collapse:collapse}th,td{padding:8px;border-bottom:1px solid #334155}th{color:#fbbf24}
+.btn,button{background:#2563eb;color:#fff;padding:8px 12px;border-radius:8px;text-decoration:none;border:none;cursor:pointer}
+.progress{height:14px;background:#334155;border-radius:10px}#bar{height:100%;width:0;background:#22c55e}
+.logo{width:180px;max-width:100%}
+.topo{display:flex;align-items:center;gap:20px}
+#splash{position:fixed;top:0;left:0;width:100%;height:100%;background:#0f172a;display:flex;justify-content:center;align-items:center;z-index:99999;transition:opacity .5s}
+#splash img{width:380px;max-width:85%;animation:logoZoom .8s ease}
+@keyframes logoZoom{from{opacity:0;transform:scale(.7)}to{opacity:1;transform:scale(1)}}
+</style></head><body>
+    <div id="splash">
+    <img src="assets/logo.png" alt="Logo">
+</div>
+    <header class="topo">
+    <img src="assets/logo.png" class="logo"> 
+        <div>
+
+        <h1>Simplifiquei TEC Builder</h1>
+
+        <p>Disciplina • Foco • Evolução</p>
+
+    </div>
+
+    </header>
+<main>
+<div class='card'>
+<h2>Dashboard</h2>
+<div class='progress'><div id='bar'></div></div>
+<p id='txt'>0% concluído</p>
+<button onclick='saveData()'>Salvar</button>
+<button onclick='loadData()'>Carregar</button>
+</div>
+
+<div class='card'>
+<h2>⏱️ Cronômetro de Descanso</h2>
+<div id='timer' class='timer'>90</div>
+<button onclick='startTimer(90)'>90 s</button>
+<button onclick='startTimer(120)'>120 s</button>
+<button onclick='startTimer(180)'>180 s</button>
+</div>
+
+<section class='card'><h2>Segunda - Full Body A</h2><table><tr><th>✔</th><th>Exercício</th><th>Séries</th><th>Reps</th><th>Carga</th><th>Execução</th></tr><tr><td><input class='ck' type='checkbox'></td><td>Agachamento Livre</td><td>3</td><td>6-8</td><td><input type='number' style='width:70px'></td><td><a class='btn' target='_blank' href='https://www.youtube.com/results?search_query=agachamento+livre'>▶ Vídeo</a></td></tr><tr><td><input class='ck' type='checkbox'></td><td>Supino Reto</td><td>3</td><td>6-8</td><td><input type='number' style='width:70px'></td><td><a class='btn' target='_blank' href='https://www.youtube.com/results?search_query=supino+reto'>▶ Vídeo</a></td></tr><tr><td><input class='ck' type='checkbox'></td><td>Remada Curvada</td><td>3</td><td>8-10</td><td><input type='number' style='width:70px'></td><td><a class='btn' target='_blank' href='https://www.youtube.com/results?search_query=remada+curvada'>▶ Vídeo</a></td></tr><tr><td><input class='ck' type='checkbox'></td><td>Desenvolvimento Militar</td><td>2</td><td>8-10</td><td><input type='number' style='width:70px'></td><td><a class='btn' target='_blank' href='https://www.youtube.com/results?search_query=desenvolvimento+militar'>▶ Vídeo</a></td></tr><tr><td><input class='ck' type='checkbox'></td><td>Mesa Flexora</td><td>2</td><td>10-12</td><td><input type='number' style='width:70px'></td><td><a class='btn' target='_blank' href='https://www.youtube.com/results?search_query=mesa+flexora'>▶ Vídeo</a></td></tr><tr><td><input class='ck' type='checkbox'></td><td>Rosca Direta</td><td>2</td><td>10-12</td><td><input type='number' style='width:70px'></td><td><a class='btn' target='_blank' href='https://www.youtube.com/results?search_query=rosca+direta'>▶ Vídeo</a></td></tr><tr><td><input class='ck' type='checkbox'></td><td>Tríceps Corda</td><td>2</td><td>10-12</td><td><input type='number' style='width:70px'></td><td><a class='btn' target='_blank' href='https://www.youtube.com/results?search_query=triceps+corda'>▶ Vídeo</a></td></tr><tr><td><input class='ck' type='checkbox'></td><td>Panturrilha em Pé</td><td>3</td><td>12-15</td><td><input type='number' style='width:70px'></td><td><a class='btn' target='_blank' href='https://www.youtube.com/results?search_query=panturrilha+em+pe'>▶ Vídeo</a></td></tr><tr><td><input class='ck' type='checkbox'></td><td>Prancha</td><td>3</td><td>40-60 s</td><td><input type='number' style='width:70px'></td><td><a class='btn' target='_blank' href='https://www.youtube.com/results?search_query=prancha+abdominal'>▶ Vídeo</a></td></tr></table></section>
+<section class='card'><h2>Quarta - Full Body B</h2><table><tr><th>✔</th><th>Exercício</th><th>Séries</th><th>Reps</th><th>Carga</th><th>Execução</th></tr><tr><td><input class='ck' type='checkbox'></td><td>Terra Romeno</td><td>3</td><td>8</td><td><input type='number' style='width:70px'></td><td><a class='btn' target='_blank' href='https://www.youtube.com/results?search_query=terra+romeno'>▶ Vídeo</a></td></tr><tr><td><input class='ck' type='checkbox'></td><td>Leg Press</td><td>3</td><td>10</td><td><input type='number' style='width:70px'></td><td><a class='btn' target='_blank' href='https://www.youtube.com/results?search_query=leg+press'>▶ Vídeo</a></td></tr><tr><td><input class='ck' type='checkbox'></td><td>Supino Inclinado</td><td>3</td><td>8-10</td><td><input type='number' style='width:70px'></td><td><a class='btn' target='_blank' href='https://www.youtube.com/results?search_query=supino+inclinado'>▶ Vídeo</a></td></tr><tr><td><input class='ck' type='checkbox'></td><td>Puxada Frontal</td><td>3</td><td>8-10</td><td><input type='number' style='width:70px'></td><td><a class='btn' target='_blank' href='https://www.youtube.com/results?search_query=puxada+frontal'>▶ Vídeo</a></td></tr><tr><td><input class='ck' type='checkbox'></td><td>Elevação Lateral</td><td>2</td><td>12-15</td><td><input type='number' style='width:70px'></td><td><a class='btn' target='_blank' href='https://www.youtube.com/results?search_query=elevacao+lateral'>▶ Vídeo</a></td></tr><tr><td><input class='ck' type='checkbox'></td><td>Rosca Martelo</td><td>2</td><td>10-12</td><td><input type='number' style='width:70px'></td><td><a class='btn' target='_blank' href='https://www.youtube.com/results?search_query=rosca+martelo'>▶ Vídeo</a></td></tr><tr><td><input class='ck' type='checkbox'></td><td>Tríceps Francês</td><td>2</td><td>10-12</td><td><input type='number' style='width:70px'></td><td><a class='btn' target='_blank' href='https://www.youtube.com/results?search_query=triceps+frances'>▶ Vídeo</a></td></tr><tr><td><input class='ck' type='checkbox'></td><td>Panturrilha Sentado</td><td>3</td><td>15</td><td><input type='number' style='width:70px'></td><td><a class='btn' target='_blank' href='https://www.youtube.com/results?search_query=panturrilha+sentado'>▶ Vídeo</a></td></tr><tr><td><input class='ck' type='checkbox'></td><td>Abdominal Polia</td><td>3</td><td>12-15</td><td><input type='number' style='width:70px'></td><td><a class='btn' target='_blank' href='https://www.youtube.com/results?search_query=abdominal+polia'>▶ Vídeo</a></td></tr></table></section>
+<section class='card'><h2>Sexta - Full Body C</h2><table><tr><th>✔</th><th>Exercício</th><th>Séries</th><th>Reps</th><th>Carga</th><th>Execução</th></tr><tr><td><input class='ck' type='checkbox'></td><td>Agachamento Hack</td><td>3</td><td>8</td><td><input type='number' style='width:70px'></td><td><a class='btn' target='_blank' href='https://www.youtube.com/results?search_query=agachamento+hack'>▶ Vídeo</a></td></tr><tr><td><input class='ck' type='checkbox'></td><td>Paralelas</td><td>3</td><td>8-10</td><td><input type='number' style='width:70px'></td><td><a class='btn' target='_blank' href='https://www.youtube.com/results?search_query=paralelas'>▶ Vídeo</a></td></tr><tr><td><input class='ck' type='checkbox'></td><td>Remada Baixa</td><td>3</td><td>10</td><td><input type='number' style='width:70px'></td><td><a class='btn' target='_blank' href='https://www.youtube.com/results?search_query=remada+baixa'>▶ Vídeo</a></td></tr><tr><td><input class='ck' type='checkbox'></td><td>Desenvolvimento Halteres</td><td>3</td><td>10</td><td><input type='number' style='width:70px'></td><td><a class='btn' target='_blank' href='https://www.youtube.com/results?search_query=desenvolvimento+halteres'>▶ Vídeo</a></td></tr><tr><td><input class='ck' type='checkbox'></td><td>Cadeira Extensora</td><td>2</td><td>12</td><td><input type='number' style='width:70px'></td><td><a class='btn' target='_blank' href='https://www.youtube.com/results?search_query=cadeira+extensora'>▶ Vídeo</a></td></tr><tr><td><input class='ck' type='checkbox'></td><td>Mesa Flexora</td><td>2</td><td>12</td><td><input type='number' style='width:70px'></td><td><a class='btn' target='_blank' href='https://www.youtube.com/results?search_query=mesa+flexora'>▶ Vídeo</a></td></tr><tr><td><input class='ck' type='checkbox'></td><td>Rosca Scott</td><td>2</td><td>10-12</td><td><input type='number' style='width:70px'></td><td><a class='btn' target='_blank' href='https://www.youtube.com/results?search_query=rosca+scott'>▶ Vídeo</a></td></tr><tr><td><input class='ck' type='checkbox'></td><td>Tríceps Testa</td><td>2</td><td>10-12</td><td><input type='number' style='width:70px'></td><td><a class='btn' target='_blank' href='https://www.youtube.com/results?search_query=triceps+testa'>▶ Vídeo</a></td></tr><tr><td><input class='ck' type='checkbox'></td><td>Panturrilha</td><td>3</td><td>15-20</td><td><input type='number' style='width:70px'></td><td><a class='btn' target='_blank' href='https://www.youtube.com/results?search_query=panturrilha'>▶ Vídeo</a></td></tr></table></section>
+
+<div class='card'>
+<h2>Regras</h2>
+<ul>
+<li>Treine próximo da falha (RIR 1–2).</li>
+<li>Descanso: 90–120 s nos compostos e 45–60 s nos isolados.</li>
+<li>Aumente a carga quando atingir o topo da faixa de repetições por duas sessões.</li>
+<li>Proteína: 1,6–2,2 g/kg/dia.</li>
+</ul>
+</div>
+</main>
+<script>
+function update(){
+ let c=[...document.querySelectorAll('.ck')].filter(x=>x.checked).length;
+ let t=document.querySelectorAll('.ck').length;
+ let p=Math.round(c/t*100);
+ document.getElementById('bar').style.width=p+'%';
+ document.getElementById('txt').innerText=p+'% concluído';
+}
+document.addEventListener('change',e=>{if(e.target.classList.contains('ck'))update();});
+function saveData(){
+ let data={c:[...document.querySelectorAll('.ck')].map(x=>x.checked)};
+ localStorage.setItem('stb_elite',JSON.stringify(data)); alert('Progresso salvo!');
+}
+function loadData(){
+ let d=JSON.parse(localStorage.getItem('stb_elite')||'{}');
+ if(d.c)document.querySelectorAll('.ck').forEach((x,i)=>x.checked=d.c[i]);
+ update();
+}
+let iv;
+function startTimer(s){
+ clearInterval(iv);
+ timer.textContent=s;
+ iv=setInterval(()=>{s--;timer.textContent=s;if(s<=0){clearInterval(iv);alert('Descanso finalizado!');}},1000);
+}
+window.onload=function(){
+loadData();
+setTimeout(function(){
+document.getElementById("splash").style.opacity="0";
+setTimeout(function(){
+document.getElementById("splash").style.display="none";
+},500);
+
+},1800);
+}
+</script>
+</body>
+</html>
