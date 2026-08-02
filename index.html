@@ -16,8 +16,8 @@ table{width:100%;border-collapse:collapse}th,td{padding:8px;border-bottom:1px so
 @keyframes logoZoom{from{opacity:0;transform:scale(.7)}to{opacity:1;transform:scale(1)}}
 </style></head><body>
     <header class="topo">
-    <img src="https://raw.githubusercontent.com/luansoares88/simplifiquei-tec-builder2/main/assets/logo.png" class="logo">
-    <div>
+    <img src="assets/logo.png" class="logo"> 
+        <div>
 
         <h1>Simplifiquei TEC Builder</h1>
 
@@ -81,6 +81,17 @@ function startTimer(s){
  timer.textContent=s;
  iv=setInterval(()=>{s--;timer.textContent=s;if(s<=0){clearInterval(iv);alert('Descanso finalizado!');}},1000);
 }
-window.onload=loadData;
+window.onload=function(){
+loadData();
+setTimeout(function(){
+document.getElementById("splash").style.opacity="0";
+setTimeout(function(){
+document.getElementById("splash").style.display="none";
+},500);
+},1800);
+}
 </script>
-</body></html>
+<body>
+<div id="splash">
+<img src="assets/logo.png" alt="Logo">
+</div></html>
